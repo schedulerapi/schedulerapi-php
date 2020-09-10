@@ -13,11 +13,21 @@ composer require schedulerapi/schedulerapi-php
 ## Usage
 
 ```php
+    $key = '890asfe08qt43hqtwr980agdsf9y8dfsay234hnb4308'; // API key from the service - https://www.schedulerapi.com/
+    $s = new Scheduler(['key'=>$key]);
+    $soon = new \DateTime('now', new \DateTimeZone('UTC'));
+    $soon->modify('+5 min');
+    $results = $s->scheduleWebhook(
+        $soon,
+        'https://mydomain.com?mykey=somevalue',
+        'GET',
+        ''
+    );
 ```
 
 ## Tests
 
-Tests are executed via PHPUnit.  You will need to use composer to install the dev 
+Tests executed via PHPUnit.  You will need to use composer to install the dev 
 
 ```shell script
 ./vendor/bin/phpunit

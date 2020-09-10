@@ -1,6 +1,7 @@
 {
     "name": "schedulerapi/schedulerapi-php",
     "type": "library",
+    "version": "1.0.1",
     "description": "Provides a PHP SDK for accessing the Scheduler API event scheduling service",
     "keywords": [
         "scheduler",
