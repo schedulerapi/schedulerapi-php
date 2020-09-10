@@ -1,0 +1,6 @@
+# remove phpStorm pathing
+.idea
+
+# remove composer paths
+vendor
+tests/env.key.txt
